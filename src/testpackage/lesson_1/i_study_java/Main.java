@@ -5,36 +5,42 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Добрый день, как Вас зовут?");
         Scanner scanner = new Scanner(System.in);
+        /*System.out.println("Добрый день, как Вас зовут?");
+
         String name = scanner.nextLine();
         System.out.println(name + "...");
         System.out.println("Очень приятно, " + name + "! А я - калькулятор))) Предлагаю что-нибудь посчитать!");
-        System.out.println("Только учтите: на ноль делить нельзя, дробные части нужно отделять запятой... ");
-        System.out.println("... и да, я умею выполнять только 4 операции!");
-        System.out.println("Введите номер операции");
-        System.out.println("1 - Сложение");
-        System.out.println("2 - Вычитание");
-        System.out.println("3 - Умножение");
-        System.out.println("4 - Деление");
-        int operation = scanner.nextInt();
-        System.out.println("О, прекрасный выбор! Введите первое число");
-        float a = scanner.nextFloat();
-        System.out.println("Введите второе число");
-        float b = scanner.nextFloat();
-        float result;
-        if (operation == 1) {
-            result = a + b;
-        } else if (operation == 2) {
-            result = a - b;
-        } else if (operation == 3) {
-            result = a * b;
-        } else {
-            result = a / b;
-        }
+        System.out.println("Только сначала сделай важный выбор: введи 1, 2 или ничего (в этом случае просто нажми Enter).");
+        System.out.println("Но учти, в третьем случае я закроюсь и мы совсем не пообщаемся(((");*/
+        System.out.println("Введи 1, 2 или ничего");
+        String number = scanner.nextLine();
+        while (!number.isEmpty()) {
+            if (number.equals("1")) {
+                window1 win1 = new window1();
+                win1.setVisible(true);
+                System.out.println("О, прекрасный выбор!\n" +
+                        "Если не видно всплывающего окна, значит нужно нажать значок Java, который замаячил внизу.\n"+
+                        "Для интереса введи теперь цифру 2.");
+                number = scanner.nextLine();
+                continue;
+            } else if (number.equals("2")) {
+                window2 win2 = new window2();
+                window1 win1 = new window1();
+                win1.setVisible(false);
+                win1.dispose();
+                System.out.println("Отлично! \n" +
+                        "Если не видно всплывающего окна, значит нужно нажать значок Java, который замаячил внизу.\n"+
+                        "Попробуй теперь ввести цифру 1.\nНо помни, что можно просто нажать Enter и мы расстанемся.");
+                number = scanner.nextLine();
+                continue;
+            } else if ((!number.equals("1")) && (!number.equals("2"))) {
+                System.out.println("Давай, как-то будем следовать предложенным вариантам.\nВведи 1 или 2, ну или ничего, если не хочешь общаться.");
+                number = scanner.nextLine();
+                continue;
+            }
 
-
-        System.out.println("Результат = " + result);
-
-    }
-}
+        }  // while cycle
+        System.exit(0);
+    }  // method main
+} // class Main
