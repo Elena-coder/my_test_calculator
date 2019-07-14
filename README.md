@@ -1,9 +1,9 @@
 # my_test_calculator
 This program serves as a calculator.   
-The first release (see tag ex1) operates through the command line.    
+The first release (see tag <ex1>) operates through the command line.    
 Upon a quick introduction after a user enters 2 numbers and the chooses a mathematical operation the program calculates the result.
 
-The second release (see tag ex1_v.1.1) uses GUI.   
+The second release (see tag <ex1_v.1.1>) uses GUI.   
 Upon a quick introduction the program offers to choose between 3 options: 1, 2 or nothing.  
 * If the user chooses 1 he/she sees an interactive window containing a textfield (asking his/her mood) and checkbox (asking readiness to test the calculator). 
 Based on the user's answer a dialog box is shown repeating the text which was entered by the user into the textfield.  
