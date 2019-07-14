@@ -90,5 +90,5 @@ public class window2 extends window1 {
         buttonDivide.addActionListener(calcEngine);
         buttonMultiply.addActionListener(calcEngine);
         buttonEqual.addActionListener(calcEngine);
-    }  //constructor test_calc3
-}  //public class test_calc3
+    }  //constructor window2
+}  //public class window2
